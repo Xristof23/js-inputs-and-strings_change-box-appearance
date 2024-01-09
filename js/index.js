@@ -16,3 +16,26 @@ For further information check MDN:
 - about CSS declarations with "style": https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style
 
 */
+
+const box = document.querySelector('[data-js="box"]');
+
+const colorInput = document.querySelector("[data-js=input-color]");
+colorInput.addEventListener("input", () => {
+  box.style.backgroundColor = `hsl(${colorInput.value}, 70%, 60%)`;
+});
+
+const value = document.querySelector("#value");
+value.textContent = colorInput.value;
+colorInput.addEventListener("input", (event) => {
+  value.textContent = event.target.value;
+});
+
+const radiusInput = document.querySelector("[data-js=input-radius]");
+radiusInput.addEventListener("input", () => {
+  box.style.borderRadius = `${radiusInput.value}px`;
+});
+const radiusValue = document.querySelector("#radius-value");
+radiusValue.textContent = radiusInput.value;
+radiusInput.addEventListener("input", (event) => {
+  radiusValue.textContent = event.target.value;
+});

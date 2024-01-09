@@ -15,7 +15,7 @@
     <div class="box" data-js="box"></div>
     <form>
       <p>
-        <label for="color"> Color: </label>
+        <label for="color"> Color: <output id="value"></output></label>
         <input
           id="color"
           type="range"
@@ -24,8 +24,11 @@
           data-js="input-color"
         />
       </p>
+
       <p>
-        <label for="radius"> Border Radius: </label>
+        <label for="radius">
+          Border Radius: <output id="radius-value"></output
+        ></label>
         <input
           id="radius"
           type="range"
