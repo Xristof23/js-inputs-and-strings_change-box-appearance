@@ -23,7 +23,6 @@ const colorInput = document.querySelector("[data-js=input-color]");
 colorInput.addEventListener("input", () => {
   box.style.backgroundColor = `hsl(${colorInput.value}, 70%, 60%)`;
 });
-
 const value = document.querySelector("#value");
 value.textContent = colorInput.value;
 colorInput.addEventListener("input", (event) => {
@@ -38,4 +37,16 @@ const radiusValue = document.querySelector("#radius-value");
 radiusValue.textContent = radiusInput.value;
 radiusInput.addEventListener("input", (event) => {
   radiusValue.textContent = event.target.value;
+});
+
+const rotationInput = document.querySelector("[data-js=input-rotation]");
+rotationInput.addEventListener("input", () => {
+  // box.style.transform = rotate(`${rotationInput.value}deg`);
+  box.style.rotate = `${rotationInput.value}deg`;
+});
+
+const rotationValue = document.querySelector("#rotation-value");
+rotationValue.textContent = rotationInput.value;
+rotationInput.addEventListener("input", (event) => {
+  rotationValue.textContent = event.target.value;
 });
